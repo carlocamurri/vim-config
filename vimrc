@@ -35,3 +35,37 @@ inoremap <c-u> <esc>vbUea
 " In normal mode: convert current word to uppercase
 nnoremap <leader>u vawU<esc>
 
+" vimrc quick editing and sourcing
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Go to end of file: last line, last column
+noremap <leader>ef G$
+
+" Useful abbreviations
+iabbrev @@ carlo.camurri98@gmail.com
+iabbrev lipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Sit amet commodo nulla facilisi. Enim lobortis scelerisque fermentum dui. Amet nisl purus in mollis nunc sed id. Egestas integer eget aliquet nibh praesent tristique. At imperdiet dui accumsan sit amet nulla. Neque viverra justo nec ultrices dui sapien eget. Nec ultrices dui sapien eget mi proin. Sapien pellentesque habitant morbi tristique. Dolor morbi non arcu risus. Cursus metus aliquam eleifend mi. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Proin sagittis nisl rhoncus mattis. Vulputate enim nulla aliquet porttitor lacus luctus accumsan. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Sit amet mattis vulputate enim nulla aliquet porttitor lacus.
+
+" Surround current word with characters
+nnoremap <leader>" e<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' e<esc>a'<esc>bi'<esc>lel
+nnoremap <leader>{ e<esc>a<space>}<esc>bi{<space><esc>lel
+
+" Surround visual selection with characters
+vnoremap <leader>" c""<esc>P
+vnoremap <leader>' c''<esc>P
+vnoremap <leader>{ c{<space><space>}<esc>hP
+
+" Faster normal mode
+inoremap jk <esc>
+
+" Arrow keys are for the weak
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+
