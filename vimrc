@@ -12,7 +12,12 @@ set relativenumber
 set shiftround
 set expandtab
 set tabstop=4
+set shiftwidth=4
 set softtabstop=4
+
+" Set wrapping to not happen in the middle of word and indent at same level
+set linebreak
+set breakindent
 
 " Leader mappings
 let mapleader = "\<space>"
@@ -58,6 +63,7 @@ vnoremap <leader>{ c{<space><space>}<esc>hP
 
 " Faster normal mode
 inoremap jk <esc>
+vnoremap jk <esc>
 
 " Arrow keys are for the weak
 inoremap <left> <nop>
@@ -69,3 +75,9 @@ noremap <right> <nop>
 noremap <up> <nop>
 noremap <down> <nop>
 
+" Always align html file before saving
+autocmd BufWritePre,BufRead *.html :normal gg=G
+
+" Some C autocommands
+autocmd FileType c nnoremap <buffer> <localleader>if iif<space>()<space>{<cr>}<esc>bba
+autocmd FileType c nnoremap <buffer> <localleader>wh iwhile<space>()<space>{<cr>}<esc>bba
